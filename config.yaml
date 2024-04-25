@@ -1,0 +1,11 @@
+name: My Envio Indexer
+networks:
+  - id: 42161
+    start_block: 0
+    contracts:
+      - name: L2ArbitrumToken
+        address:
+          - 0x912CE59144191C1204E64559FE8253a0e49E6548
+        handler: src/EventHandlers.ts
+        events:
+          - event: Transfer(address indexed from, address indexed to, uint256 value)
